@@ -32,10 +32,10 @@ output "terraform_apply_reviewers" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_apply_reviewers
 }
 
-output "terraform_planners_group_id" {
-  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_planners_group_id
+output "terraform_planners_google_group_id" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_planners_google_group_id
 }
 
-output "terraformers_group_id" {
-  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraformers_group_id
+output "terraformers_google_group_id" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraformers_google_group_id
 }
