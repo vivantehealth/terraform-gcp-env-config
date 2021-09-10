@@ -47,10 +47,10 @@ jobs:
           DRY_RUN: true
           RELEASE_BRANCHES: "*"
       - name: List Release
-        run: echo "This will create the release '${{ steps.tag.tag }}'"
+        run: echo "This will create the release '${{ steps.tag.outputs.tag }}'"
       - name: Create Release
         uses: ncipollo/release-action@v1
         with:
           body: ${{ github.event.head_commit.message }}
-          tag: ${{ steps.tag.tag }}
+          tag: ${{ steps.tag.outputs.tag }}
 
