@@ -36,7 +36,7 @@ jobs:
           WITH_V: false
           DRY_RUN: true
       - name: Simulated release results
-        run: echo 'If merged to the main branch, this commit would release the tag ${{ steps.tag.tag }}. Use #patch, #minor or #major in the merge commit message to ensure the bump level you want'
+        run: echo 'If merged to the main branch, this commit would release the tag ${{ steps.tag.tag }}. Use \#patch, \#minor or \#major in the merge commit message to ensure the bump level you want'
 
   release:
     name: Release
