@@ -2,6 +2,8 @@
 
 Provides a wrapper around the environment config file, allowing easy access to environment-wide variables set by gcp-org-terraform when the folder was created.
 
+Fetches the environment configuration file from TF project's `-env-config` bucket and provides values as outputs.
+
 ## Development
 During development, the module can be referenced with the following syntax
 
