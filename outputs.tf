@@ -32,6 +32,14 @@ output "terraform_apply_reviewers" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_apply_reviewers
 }
 
+output "terraform_planners_google_group_email" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_planners_google_group_email
+}
+
+output "terraformers_google_group_email" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraformers_google_group_email
+}
+
 output "terraform_planners_google_group_id" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_planners_google_group_id
 }
