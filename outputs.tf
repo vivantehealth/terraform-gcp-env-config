@@ -1,3 +1,7 @@
+output "data" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content)
+}
+
 output "env_terraform_project_id" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).env_terraform_project_id
 }
