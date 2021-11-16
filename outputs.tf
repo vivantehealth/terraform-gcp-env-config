@@ -57,3 +57,11 @@ output "terraformers_google_group_id" {
 output "docker_registry" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).docker_registry
 }
+
+output "registry_readers_google_group_email" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).registry_readers_google_group_email
+}
+
+output "registry_readers_google_group_id" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).registry_readers_google_group_id
+}
