@@ -26,14 +26,6 @@ output "env_name" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).env_name
 }
 
-output "secret_rotation_topic" {
-  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).secret_rotation_topic
-}
-
-output "secret_rotation_sa_email" {
-  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).secret_rotation_sa_email
-}
-
 output "terraform_apply_reviewers" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_apply_reviewers
 }
