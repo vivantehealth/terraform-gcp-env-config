@@ -57,3 +57,7 @@ output "registry_readers_google_group_email" {
 output "registry_readers_google_group_id" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).registry_readers_google_group_id
 }
+
+output "workload_identity_provider" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).workload_identity_provider
+}
