@@ -61,3 +61,11 @@ output "registry_readers_google_group_id" {
 output "workload_identity_provider" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).workload_identity_provider
 }
+
+output "vivantehealth_dns_zone" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).vivantehealth_dns_zone
+}
+
+output "mygithrive_dns_zone" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).mygithrive_dns_zone
+}
