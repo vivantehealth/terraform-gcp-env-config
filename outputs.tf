@@ -26,14 +26,6 @@ output "env_name" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).env_name
 }
 
-output "secret_rotation_topic" {
-  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).secret_rotation_topic
-}
-
-output "secret_rotation_sa_email" {
-  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).secret_rotation_sa_email
-}
-
 output "terraform_apply_reviewers" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).terraform_apply_reviewers
 }
@@ -68,4 +60,12 @@ output "registry_readers_google_group_id" {
 
 output "workload_identity_provider" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).workload_identity_provider
+}
+
+output "vivantehealth_dns_zone" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).vivantehealth_dns_zone
+}
+
+output "mygithrive_dns_zone" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).mygithrive_dns_zone
 }
