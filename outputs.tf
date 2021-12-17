@@ -69,3 +69,11 @@ output "vivantehealth_dns_zone" {
 output "mygithrive_dns_zone" {
   value = jsondecode(data.google_storage_bucket_object_content.env_config.content).mygithrive_dns_zone
 }
+
+output "vivantehealth_dns_project" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).vivantehealth_dns_project
+}
+
+output "mygithrive_dns_project" {
+  value = jsondecode(data.google_storage_bucket_object_content.env_config.content).mygithrive_dns_project
+}
