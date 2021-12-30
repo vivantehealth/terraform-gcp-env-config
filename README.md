@@ -1,5 +1,18 @@
 # terraform-gcp-env-config
 
+## Deprecated
+This module is deprecated in favor of using the following terraform
+```
+data "google_storage_bucket_object_content" "env_config" {
+  name   = "config.v2.json"
+  bucket = "${var.terraform_project_id}-env-config"
+}
+locals {
+  env_config = jsondecode(data.google_storage_bucket_object_content.env_config.content)
+}
+```
+
+
 Provides a wrapper around the environment config file, allowing easy access to environment-wide variables set by gcp-org-terraform when the folder was created.
 
 Fetches the environment configuration file from TF project's `-env-config` bucket and provides values as outputs.
